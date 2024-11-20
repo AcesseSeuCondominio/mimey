@@ -1,22 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
 	bootstrap="tests/bootstrap.php"
-	convertErrorsToExceptions="true"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
-	strict="true">
+	displayDetailsOnTestsThatTriggerDeprecations="true"
+	displayDetailsOnPhpunitDeprecations="true"
+	cacheResult="false"
+	>
 
-	<testsuite>
-		<directory>./tests/src</directory>
-	</testsuite>
-
-	<filter>
-		<whitelist>
-			<directory suffix=".php">src</directory>
-		</whitelist>
-	</filter>
-
-	<logging>
-		<log type="coverage-clover" target="build/logs/clover.xml"/>
-	</logging>
-
+	<testsuites>
+        <testsuite name="unit">
+            <directory>tests/src</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
